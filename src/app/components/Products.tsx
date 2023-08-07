@@ -17,7 +17,8 @@ function Products() {
     <div className=' justify-center flex flex-col items-center'>
     <div className='grid grid-cols-2 gap-2 mx-2 items-center justify-center  '>
       {allProducts.slice(0,showedProducts).map((product) => (
-        <div key={product.id} className=' bg-yellow-300 flex flex-col justify-center items-center rounded-xl'>
+        <div key={product.id} className={`bg-yellow-300 flex flex-col justify-center items-center rounded-xl
+         ${product.Instock === 0 ? 'bg-gray-300 py-5' : ''}`}>
           <div className=' justify-center items-center flex flex-col text-center'>
           <h1 className='mt-4 text-xl'>{product.title}</h1>
           <h2 className='mt-2 text-sm'>{product.description}</h2>
@@ -26,7 +27,7 @@ function Products() {
           <img src={product.image} alt={product.title}  className='my-2'/>
           <div className='flex flex-col items-center justify-center'>
             <h1 className='hover:rounded-xl hover:bg-white hover:px-2'>Category : {product.category}</h1>
-          <span className=''>InStock : {product.Instock}</span>
+          <span className="text-black">InStock : <span className={`text-black ${product.Instock === 0 ? 'text-red-400' : ''}`}>{product.Instock}</span></span>
           </div>
           {product.Instock >0&&(
           <button className='bg-white rounded-xl px-4 my-4' onClick={()=>addToCart(product.id)}>Add to Cart</button>
