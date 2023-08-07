@@ -5,6 +5,7 @@ import Products from './components/Products'
 import Filters from './components/Filters'
 
 export default function Home() {
+  
   return (
     <main className=" sexygradient h-full flex overflow-hidden w-full">
     <Header />

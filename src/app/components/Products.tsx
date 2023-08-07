@@ -4,7 +4,7 @@
 import React from 'react'
 import { productData } from '../utils/productsData'
 
-function Products() {
+function Products({}) {
   return (
     <div className=' justify-center flex flex-col items-center'>
     <div className='grid grid-cols-2 gap-2 mx-2  '>
