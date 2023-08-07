@@ -8,7 +8,7 @@ function Category() {
   return (
     <div className='grid grid-cols-4 gap-4 mx-2 mt-10 overflow-hidden'>
       {categoryList.map((category) => (
-        <div 
+        <div key={category.id}
         className='bg-purple-400 flex flex-col justify-center
          items-center rounded-xl  hover:bg-[#631b5fbe] hover:shadow-2xl hover:text-white hover:font-semibold'>
           <span className=' my-2 '>{category.title}</span>
