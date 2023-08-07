@@ -9,7 +9,7 @@ function Products() {
     <div className=' justify-center flex flex-col items-center'>
     <div className='grid grid-cols-2 gap-2 mx-2  '>
       {productData.map((product) => (
-        <div className=' bg-yellow-300 flex flex-col justify-center items-center rounded-xl'>
+        <div key={product.id} className=' bg-yellow-300 flex flex-col justify-center items-center rounded-xl'>
           <div className=' justify-center items-center flex flex-col text-center'>
           <h1 className='mt-4 text-xl'>{product.title}</h1>
           <h2 className='mt-2 text-sm'>{product.description}</h2>
