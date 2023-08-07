@@ -15,13 +15,15 @@ function Category() {
     
     <div className='grid grid-cols-4 gap-4 mx-2 mt-10 overflow-hidden zxl:w-[400px] '>
       {categoryList.map((category) => (
-        <div key={category.id}
-        className='bg-purple-400 flex flex-col justify-center
-         items-center rounded-xl  hover:bg-[#631b5fbe] hover:shadow-2xl hover:text-white hover:font-semibold'>
+        <div key={category.id} onClick={()=> selectedCategory != category.title ? setSelectedCategory(category.title) : setSelectedCategory('') }
+        className={`bg-purple-400 flex flex-col justify-center
+         items-center rounded-xl  hover:bg-[#631b5fbe] hover:shadow-2xl hover:text-white hover:font-semibold
+         ${category.title===selectedCategory? 'bg-[#631b5fbe]' : ""}`}>
           <span className=' my-2 '>{category.title}</span>
           <motion.img src={category.img} alt={category.title}  
-          className='my-2'
-           whileHover={{scale:1.1}}/>
+          className={`my-2${category.title===selectedCategory? ' scale-110' : ""}`}
+           whileHover={{scale:1.1}}
+           />
         </div>
       ))}
     </div>
