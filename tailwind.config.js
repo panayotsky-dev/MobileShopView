@@ -15,6 +15,9 @@ module.exports = {
 
       screens: {
         xs: "640px",
+        phone: {'min': '300px', 'max': '640px'},
+        zxl: "1900px", 
+
         
       },
     },
