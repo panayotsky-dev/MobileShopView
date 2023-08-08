@@ -8,7 +8,7 @@ import { useCartContext } from '../utils/cartContext'
 function Category() {
   
   const { setSelectedCategory: setContextSelectedCategory } = useCartContext();
-  const { selectedCategory, setSelectedCategory, setSortType,sortType } = useCartContext();
+  const { selectedCategory, setSelectedCategory, setSortType,sortType,filterColor, setFilterColor } = useCartContext();
   
 
   const allColors = colorsByData(productData)
@@ -45,7 +45,9 @@ function Category() {
     </div>
     <div className='mx-4 phone:mx-1 sm:phone:mx-2 my-6 flex flex-row sphone:flex-col  justify-between items-center '>
         <div className='w-[180px] phone:w-[160px] sphone:w-full sphone:mx-8 zxl:mx-4  '>
-          <select className='rounded-xl bg-white px-4 sphone:px-2 py-1 text-black w-full sphone:my-4  '>
+          <select className='rounded-xl bg-white px-4 sphone:px-2 py-1 text-black w-full sphone:my-4  '
+          value={filterColor}
+          onChange={(e) => setFilterColor(e.target.value)}>
           <option value="default">Filter by Color</option>
           {allColors?.map((color) =>(
             <option value={color}>{color}</option>

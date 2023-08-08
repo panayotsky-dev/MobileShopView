@@ -15,28 +15,23 @@ export function CartProvider({ children }) {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [filterColor, setFilterColor] = useState('default');
   
-  const sortProducts = (products) => {
+  const filteredProducts = allProducts
+  .filter((product) => selectedCategory === '' || product.category === selectedCategory)
+  .filter((product) => filterColor === 'default' || product.Filtering.Color === filterColor)
+  .sort((a, b) => {
     switch (sortType) {
       case 'lowToHigh':
-        return products.slice().sort((a, b) => a.price - b.price);
+        return a.price - b.price;
       case 'highToLow':
-        return products.slice().sort((a, b) => b.price - a.price);
+        return b.price - a.price;
       case 'aToZ':
-        return products.slice().sort((a, b) => a.title.localeCompare(b.title));
+        return a.title.localeCompare(b.title);
       case 'zToA':
-        return products.slice().sort((a, b) => b.title.localeCompare(a.title));
+        return b.title.localeCompare(a.title);
       default:
-        return products;
+        return 0;
     }
-  };
-
- 
-
-  
-    const filteredProducts = selectedCategory === ''
-    ? sortProducts(allProducts)
-    : sortProducts(allProducts.filter((product) => product.category === selectedCategory));
-
+  });
 
 
   const addToCart = (productId) => {
