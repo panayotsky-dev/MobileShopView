@@ -7,17 +7,17 @@ The project has been developed using React and Next.js to create a seamless and 
 ## Components
 - **Header Component:** This component prominently displays the page header text and dynamically updates the number of items in the cart.
 - **Category Component:** Users can explore a range of categories, enabling them to filter products based on their chosen category and color preference.
-- **Products Component:** This section showcases a comprehensive list of products. Users can personalize their view by utilizing filters and sorting options.
-- **ProductItem Component:** Each product is elegantly displayed, showcasing pertinent information and details for individual items.
+- **Products Component:** This section showcases a  list of products. Users can personalize their view by utilizing filters and sorting options.
+  
 
 ## Cart Context
 A dedicated context has been implemented to offer users insights into their shopping cart's contents. The context also facilitates operations related to product addition.
 
 ## Functionalities
-- **Category Filtering:** Users can effortlessly select a specific category to exclusively display products belonging to that category.
+- **Category Filtering:** Users can  select a specific category to exclusively display products belonging to that category.
 - **Color Filtering:** The color filter feature allows users to refine their search, showcasing products only in their preferred color.
-- **Product Sorting:** The project empowers users to sort products by price or name, enhancing the shopping experience.
-- **Adding Products to Cart:** A seamless process allows users to easily add products to their cart, enhancing convenience.
+- **Product Sorting:**  users can sort products by price or name, enhancing the shopping experience.
+- **Adding Products to Cart:** A  process allows users to easily add products to their cart, enhancing convenience.
 - **Decreasing Product Stock:** Whenever a product is added to the cart, the stock availability of that item is appropriately reduced.
 
 ## Animations
