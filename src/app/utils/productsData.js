@@ -29,7 +29,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'blue',Useful:false},
-        image:'/Coffee/2.webp',
+        image:'/Coffee/1.webp',
         rating:'****',
         Instock:7,
  
@@ -56,7 +56,7 @@ export const productData = [
         price:6.99,
         isDiscounted:false,        
         discount:0,        
-        Filtering:{Color:'green',Useful:false},
+        Filtering:{Color:"green",Useful:false},
         image:'/Coffee/4.webp',
         rating:'****',
         Instock:12,
