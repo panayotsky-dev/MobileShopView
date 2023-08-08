@@ -2,7 +2,7 @@
 ## https://test1-seven-eta.vercel.app
 
 ## Project Structure
-The project has been developed using React and Next.js to create a seamless and interactive single-page application.
+The small project has been developed using React,Next.js,TailwindCSS,Framer-motion to create a seamless and interactive single-page application.
 
 ## Components
 - **Header Component:** This component prominently displays the page header text and dynamically updates the number of items in the cart.
