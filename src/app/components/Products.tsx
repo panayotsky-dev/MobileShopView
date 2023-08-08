@@ -41,7 +41,9 @@ function Products({ allproducts, cartProducts }) {
                 <span
                   className={`bg-${product.Filtering.Color}-400 px-2 rounded-md
                ${product.Filtering.Color == "green" ? "bg-green-400" : ""}
-               ${product.Filtering.Color == "blue" ? "bg-blue-400" : ""} `}
+               ${product.Filtering.Color == "blue" ? "bg-blue-400" : ""}
+               ${product.Filtering.Color == "purple" ? "bg-purple-400" : ""}
+               ${product.Filtering.Color == "red" ? "bg-red-400" : ""} `}
                 >
                   {product.Filtering.Color}
                 </span>
