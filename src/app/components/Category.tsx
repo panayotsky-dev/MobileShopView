@@ -48,7 +48,7 @@ function Category() {
           <select className='rounded-xl bg-white px-4 sphone:px-2 py-1 text-black w-full sphone:my-4  '>
           <option value="default">Filter by Color</option>
           {allColors?.map((color) =>(
-            <option value="red">{color}</option>
+            <option value={color}>{color}</option>
           ))}       
         
           </select>
