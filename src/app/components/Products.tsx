@@ -61,7 +61,7 @@ function Products({ allproducts, cartProducts }) {
             </div>
             {product.Instock > 0 && (
               <motion.button
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.1 }} whileTap={{scale:0.95}}
                 className={`bg-slate-500 text-white rounded-xl font-light px-4 my-8  ${
                   product.id % 2 === 0
                     ? "bg-white text-slate-800 font-semibold "

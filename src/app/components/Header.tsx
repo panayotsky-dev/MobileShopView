@@ -12,7 +12,7 @@ function Header({cartProducts}) {
 
   return (
     <nav 
-        className="px-2 phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px] sticky top-0 flex flex-row bg-slate-500 w-full 
+        className="px-2 phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px] sticky top-0 flex flex-row bg-white w-full 
          justify-between items-center hover:bg-[#ffffff83] hover:shadow-xl overflow-hidden">
       <motion.img 
         src="logo.png" 

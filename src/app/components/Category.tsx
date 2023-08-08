@@ -18,7 +18,7 @@ function Category() {
         <div key={category.id} onClick={()=> selectedCategory != category.title ? setSelectedCategory(category.title) : setSelectedCategory('') }
         className={`bg-[#ffff] text-[#641960d0] font-normal flex flex-col justify-center
          items-center rounded-xl  hover:bg-[#641960d0] hover:shadow-2xl hover:text-white hover:font-semibold
-         ${category.title===selectedCategory? 'bg-[#641960d0] text-white font-semibold' : ""}`}>
+         ${category.title===selectedCategory? 'bg-[#641960d0] text-[#FFFF] font-semibold' : ""}`}>
           <span className=' my-2 '>{category.title}</span>
           <motion.img src={category.img} alt={category.title}  
           className={`my-2${category.title===selectedCategory? ' scale-110' : ""}`}
