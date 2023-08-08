@@ -222,3 +222,14 @@ export const categoryList = [
 
 
 ]
+export const colorsByData = (productData) => {
+   const colorsByData = productData.reduce((colors, product) => {
+     if (!colors.includes(product.Filtering.Color)) {
+       colors.push(product.Filtering.Color);
+     }
+     return colors;
+   }, []);
+   return colorsByData;
+ };
+ 
+ console.log(colorsByData(productData));

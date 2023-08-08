@@ -13,6 +13,7 @@ export function CartProvider({ children }) {
   const [allProducts, setAllProducts] = useState(productData)
   const [sortType,setSortType]= useState('default')
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [filterColor, setFilterColor] = useState('default');
   
   const sortProducts = (products) => {
     switch (sortType) {
@@ -54,10 +55,11 @@ export function CartProvider({ children }) {
     });
   };
 
+ 
 
  
   return (
-    <CartContext.Provider value={{ cartCount, cartProducts, allProducts, addToCart,selectedCategory,filteredProducts,setSelectedCategory,setSortType }}>
+    <CartContext.Provider value={{ cartCount, cartProducts, allProducts, addToCart,selectedCategory,filteredProducts,setSelectedCategory,setSortType,filterColor,setFilterColor }}>
       {children}
     </CartContext.Provider>
   );

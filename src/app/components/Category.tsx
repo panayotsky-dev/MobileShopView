@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import {categoryList} from '../utils/productsData'
+import {categoryList, colorsByData, productData} from '../utils/productsData'
 import {motion} from 'framer-motion'
 import { useCartContext } from '../utils/cartContext'
 
@@ -10,6 +10,9 @@ function Category() {
   const { setSelectedCategory: setContextSelectedCategory } = useCartContext();
   const { selectedCategory, setSelectedCategory, setSortType,sortType } = useCartContext();
   
+
+  const allColors = colorsByData(productData)
+
   const categoryClick = (categoryTitle) => {
     setSelectedCategory(categoryTitle);
     setContextSelectedCategory(categoryTitle); 
@@ -44,9 +47,9 @@ function Category() {
         <div className='w-[180px] phone:w-[160px] sphone:w-full sphone:mx-8 zxl:mx-4  '>
           <select className='rounded-xl bg-white px-4 sphone:px-2 py-1 text-black w-full sphone:my-4  '>
           <option value="default">Filter by Color</option>
-        <option value="red">red</option>
-        <option value="blue">blue</option>
-        <option value="purple">purple</option>
+          {allColors?.map((color) =>(
+            <option value="red">{color}</option>
+          ))}       
         
           </select>
         </div>
