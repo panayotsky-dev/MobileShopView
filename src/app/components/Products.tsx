@@ -6,15 +6,20 @@ import { useCartContext } from "../utils/cartContext";
 import { motion } from "framer-motion";
 
 function Products({ allproducts, cartProducts }) {
-  const { addToCart, allProducts } = useCartContext();
+  const { addToCart, allProducts,selectedCategory } = useCartContext();
   const [showedProducts, setShowedProducts] = useState(6);
   const [selectedColor, setSelectedColor] = useState("");
-  useEffect(() => {}, [showedProducts]);
+
+  const filteredProducts = selectedCategory === ''
+    ? allProducts
+    : allProducts.filter((product) => product.category === selectedCategory)
+
+  useEffect(() => {}, [showedProducts,selectedCategory]);
 
   return (
     <div className=" justify-center flex flex-col items-center mb-2">
       <div className="grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 gap-2 mx-2 items-center justify-center w-full h-full  ">
-        {allProducts.slice(0, showedProducts).map((product) => (
+        {filteredProducts.slice(0, showedProducts).map((product) => (
           <div
             key={product.id}
             className={` flex flex-col justify-center items-center rounded-xl 

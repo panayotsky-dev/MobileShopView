@@ -5,11 +5,14 @@ const CartContext = createContext();
 
 export const useCartContext = () => useContext(CartContext);
 
+
 export function CartProvider({ children }) {
   const [cartCount, setCartCount] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
   const [allProducts, setAllProducts] = useState(productData)
-    
+  const [selectedCategory, setSelectedCategory] = useState('');
+  
+
   
 
   const addToCart = (productId) => {
@@ -27,9 +30,12 @@ export function CartProvider({ children }) {
       });
     });
   };
+  const filteredProducts = selectedCategory === ''
+  ? allProducts
+  : allProducts.filter((product) => product.category === selectedCategory)
  
   return (
-    <CartContext.Provider value={{ cartCount, cartProducts, allProducts, addToCart }}>
+    <CartContext.Provider value={{ cartCount, cartProducts, allProducts, addToCart,selectedCategory,filteredProducts,setSelectedCategory }}>
       {children}
     </CartContext.Provider>
   );
