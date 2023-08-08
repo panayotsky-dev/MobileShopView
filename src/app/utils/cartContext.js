@@ -10,10 +10,30 @@ export function CartProvider({ children }) {
   const [cartCount, setCartCount] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
   const [allProducts, setAllProducts] = useState(productData)
+  const [sortType,setSortType]= useState('default')
   const [selectedCategory, setSelectedCategory] = useState('');
   
+  const sortProducts = (products) => {
+    switch (sortType) {
+      case 'lowToHigh':
+        return products.slice().sort((a, b) => a.price - b.price);
+      case 'highToLow':
+        return products.slice().sort((a, b) => b.price - a.price);
+      case 'aToZ':
+        return products.slice().sort((a, b) => a.title.localeCompare(b.title));
+      case 'zToA':
+        return products.slice().sort((a, b) => b.title.localeCompare(a.title));
+      default:
+        return products;
+    }
+  };
 
-  
+ 
+
+    const filteredProducts = selectedCategory === ''
+    ? allProducts
+    : allProducts.filter((product) => product.category === selectedCategory)
+
 
   const addToCart = (productId) => {
     setCartCount((prevCount) => prevCount + 1);
@@ -30,12 +50,11 @@ export function CartProvider({ children }) {
       });
     });
   };
-  const filteredProducts = selectedCategory === ''
-  ? allProducts
-  : allProducts.filter((product) => product.category === selectedCategory)
+
+
  
   return (
-    <CartContext.Provider value={{ cartCount, cartProducts, allProducts, addToCart,selectedCategory,filteredProducts,setSelectedCategory }}>
+    <CartContext.Provider value={{ cartCount, cartProducts, allProducts, addToCart,selectedCategory,filteredProducts,setSelectedCategory,setSortType }}>
       {children}
     </CartContext.Provider>
   );

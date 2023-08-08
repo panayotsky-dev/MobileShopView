@@ -6,15 +6,18 @@ import {motion} from 'framer-motion'
 import { useCartContext } from '../utils/cartContext'
 
 function Category() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  
   const { setSelectedCategory: setContextSelectedCategory } = useCartContext();
- 
+  const { selectedCategory, setSelectedCategory, setSortType,sortType } = useCartContext();
   
   const categoryClick = (categoryTitle) => {
     setSelectedCategory(categoryTitle);
     setContextSelectedCategory(categoryTitle); 
   };
-
+  const handleSortChange = (event) => {
+    const newSortType = event.target.value;
+    setSortType(newSortType);
+  };
 
 
   return (
@@ -47,7 +50,8 @@ function Category() {
           </select>
         </div>
         <div className='zxl:w-[180px] sphone:w-full sphone:mx-8 zxl:mx-4'>
-           <select className='rounded-xl bg-white px-4 py-1 text-black w-full ' value="">
+           <select className='rounded-xl bg-white px-4 py-1 text-black w-full '  onChange={handleSortChange}
+           value={sortType}>
            <option value="default">Sort Products</option>
         <option value="lowToHigh">Price: Low to High</option>
         <option value="highToLow">Price: High to Low</option>

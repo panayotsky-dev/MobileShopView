@@ -5,16 +5,14 @@ import { productData } from "../utils/productsData";
 import { useCartContext } from "../utils/cartContext";
 import { motion } from "framer-motion";
 
-function Products({ allproducts, cartProducts }) {
-  const { addToCart, allProducts,selectedCategory } = useCartContext();
+function Products() {
+  const { addToCart, allProducts,selectedCategory,filteredProducts } = useCartContext();
   const [showedProducts, setShowedProducts] = useState(6);
-  const [selectedColor, setSelectedColor] = useState("");
 
-  const filteredProducts = selectedCategory === ''
-    ? allProducts
-    : allProducts.filter((product) => product.category === selectedCategory)
 
-  useEffect(() => {}, [showedProducts,selectedCategory]);
+  
+
+  useEffect(() => {}, [showedProducts,selectedCategory,]);
 
   return (
     <div className=" justify-center flex flex-col items-center mb-2">
@@ -64,7 +62,9 @@ function Products({ allproducts, cartProducts }) {
                 >
                   {product.Instock}
                 </span>
+                
               </span>
+              <span>Price: {product.price}</span>
             </div>
             {product.Instock > 0 && (
               <motion.button
@@ -84,7 +84,7 @@ function Products({ allproducts, cartProducts }) {
       </div>
       {showedProducts < allProducts.length && (
         <button
-          className="rounded-xl bg-red-400 mt-4 px-4 py-1"
+          className="rounded-xl bg-red-400 mt-4 mb-2 px-8 py-2 "
           onClick={() => setShowedProducts(showedProducts + 6)}
         >
           Load More
