@@ -16,7 +16,8 @@ function Category() {
   };
   const handleSortChange = (event) => {
     const newSortType = event.target.value;
-    setSortType(newSortType);
+    console.log(newSortType)
+    setSortType(newSortType);    
   };
 
 
@@ -39,8 +40,8 @@ function Category() {
         </div>
       ))}
     </div>
-    <div className='mx-4 my-6 flex flex-row sphone:flex-col  justify-between items-center '>
-        <div className='w-[180px] sphone:w-full sphone:mx-8 zxl:mx-4 '>
+    <div className='mx-4 phone:mx-1 sm:phone:mx-2 my-6 flex flex-row sphone:flex-col  justify-between items-center '>
+        <div className='w-[180px] phone:w-[160px] sphone:w-full sphone:mx-8 zxl:mx-4  '>
           <select className='rounded-xl bg-white px-4 sphone:px-2 py-1 text-black w-full sphone:my-4  '>
           <option value="default">Filter by Color</option>
         <option value="red">red</option>
@@ -49,7 +50,7 @@ function Category() {
         
           </select>
         </div>
-        <div className='zxl:w-[180px] sphone:w-full sphone:mx-8 zxl:mx-4'>
+        <div className='zxl:w-[180px] phone:w-[160px] sphone:w-full sphone:mx-8 zxl:mx-4'>
            <select className='rounded-xl bg-white px-4 py-1 text-black w-full '  onChange={handleSortChange}
            value={sortType}>
            <option value="default">Sort Products</option>

@@ -1,3 +1,4 @@
+'use client'
 import React, { createContext, useState, useContext } from 'react';
 import { productData } from './productsData';
 
@@ -30,9 +31,11 @@ export function CartProvider({ children }) {
 
  
 
+  
     const filteredProducts = selectedCategory === ''
-    ? allProducts
-    : allProducts.filter((product) => product.category === selectedCategory)
+    ? sortProducts(allProducts)
+    : sortProducts(allProducts.filter((product) => product.category === selectedCategory));
+
 
 
   const addToCart = (productId) => {

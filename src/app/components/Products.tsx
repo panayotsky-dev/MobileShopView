@@ -82,7 +82,7 @@ function Products() {
           </div>
         ))}
       </div>
-      {showedProducts < allProducts.length && (
+      {showedProducts < filteredProducts.length && (
         <button
           className="rounded-xl bg-red-400 mt-4 mb-2 px-8 py-2 "
           onClick={() => setShowedProducts(showedProducts + 6)}
