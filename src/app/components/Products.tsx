@@ -16,8 +16,8 @@ function Products() {
 
   return (
     <div className=" justify-center flex flex-col items-center mb-2">
-      <div className="grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 gap-2 mx-2 items-center justify-center w-full h-full  ">
-        {filteredProducts.slice(0, showedProducts).map((product) => (
+      <div className="grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 xl:grid-cols-3 gap-2 mx-2 items-center justify-center w-full h-full  ">
+        {filteredProducts.length > 0 ? filteredProducts.slice(0, showedProducts).map((product) => (
           <div
             key={product.id}
             className={` flex flex-col justify-center items-center rounded-xl 
@@ -36,9 +36,9 @@ function Products() {
               className="my-2 max-h-[600px] "
               whileHover={{ scale: 1.15 }}
             />
-            <div className="flex flex-col zxl:flex-row zxl:justify-between zxl:w-[400px] zxl:mx-4 items-center justify-center  w-full rounded-xl ">
-              <h1 className=" ">Category : {product.category}</h1>
-              <span className="">
+            <div className="flex flex-col zxl:flex-row zxl:justify-between xl:flex-row-2 xl:justify-between zxl:w-[600px] xl:w-[550px] md:w-[370px] zxl:mx-4 items-center justify-center  w-full rounded-xl ">
+              <h1 className=" flex justify-center items-center">Category : {product.category}</h1>
+              <span className=" flex justify-center items-center mx-2">
                 {" "}
                 Color:
                 <span
@@ -80,7 +80,10 @@ function Products() {
               </motion.button>
             )}
           </div>
-        ))}
+        ))
+        : (
+          <div>We are sorry but we don't have anything with that criteria!</div>
+        )}
       </div>
       {showedProducts < filteredProducts.length && (
         <button
