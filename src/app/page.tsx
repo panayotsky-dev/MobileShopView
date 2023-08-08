@@ -16,9 +16,11 @@ export default function Home() {
     
     <Category />
     
-    <Products products={productData} cartProducts={cartProducts}/>
-    <Header />
+    <Products allproducts={productData} cartProducts={cartProducts}/>
+    <Header cartProducts={cartProducts} />
     </CartProvider>
     </main>
   )
 }
+
+

@@ -6,7 +6,7 @@ import { productData } from '../utils/productsData'
 import { useCartContext } from '../utils/cartContext'
 import {motion} from 'framer-motion'
 
-function Products() {
+function Products({allproducts,cartProducts}) {
   const { addToCart,allProducts } = useCartContext()
   const [showedProducts,setShowedProducts] = useState(6)
   const [selectedColor, setSelectedColor] = useState('');
