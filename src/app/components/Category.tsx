@@ -16,9 +16,9 @@ function Category() {
     <div className='grid grid-cols-4 gap-4 mx-2 mt-10 overflow-hidden zxl:w-[400px] '>
       {categoryList.map((category) => (
         <div key={category.id} onClick={()=> selectedCategory != category.title ? setSelectedCategory(category.title) : setSelectedCategory('') }
-        className={`bg-[#ffff] text-[#641960d0] font-normal flex flex-col justify-center
+        className={` text-[#641960d0] font-normal flex flex-col justify-center
          items-center rounded-xl  hover:bg-[#641960d0] hover:shadow-2xl hover:text-white hover:font-semibold
-         ${category.title===selectedCategory? 'bg-[#641960d0] text-[#FFFF] font-semibold' : ""}`}>
+         ${category.title===selectedCategory? 'bg-[#641960d0] text-[#FFFF] font-semibold' : "bg-[#ffff]"}`}>
           <span className=' my-2 '>{category.title}</span>
           <motion.img src={category.img} alt={category.title}  
           className={`my-2${category.title===selectedCategory? ' scale-110' : ""}`}
