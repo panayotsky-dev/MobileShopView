@@ -6,6 +6,7 @@ import Products from './components/Products'
 import { CartProvider } from './utils/cartContext'
 import { productData } from './utils/productsData'
 import { useState } from 'react'
+import Footer from './components/Footer'
 
 export default function Home() {
   const [cartProducts,setCartProducts] = useState(0)
@@ -17,7 +18,7 @@ export default function Home() {
     <Category />
     
     <Products allproducts={productData} cartProducts={cartProducts}/>
-    <Header cartProducts={cartProducts} />
+    <Footer  />
     </CartProvider>
     </main>
   )
