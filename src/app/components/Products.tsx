@@ -15,7 +15,7 @@ function Products() {
   }, [showedProducts])
   
   return (
-    <div className=' justify-center flex flex-col items-center'>
+    <div className=' justify-center flex flex-col items-center mb-2'>
     <div className='grid grid-cols-2 gap-2 mx-2 items-center justify-center  '>
       {allProducts.slice(0,showedProducts).map((product) => (
         <div key={product.id} className={` flex flex-col justify-center items-center rounded-xl
@@ -30,8 +30,8 @@ function Products() {
           <motion.img src={product.image} alt={product.title}  className='my-2' whileHover={{scale:1.15}}/>
           <div className='flex flex-col items-center justify-center  w-full rounded-xl '>
             <h1 className=' '>Category : {product.category}</h1>
-            <span> Color:
-               <span className={`bg-${product.Filtering.Color}-400 px-4 rounded-md
+            <span className=''> Color:
+               <span className={`bg-${product.Filtering.Color}-400 px-2 rounded-md
                ${product.Filtering.Color == "green" ? "bg-green-300" : ""} `}>
                 {product.Filtering.Color}
                 </span>
