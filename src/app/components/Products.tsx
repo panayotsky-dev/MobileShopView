@@ -5,28 +5,35 @@ import { productData } from "../utils/productsData";
 import { useCartContext } from "../utils/cartContext";
 import { motion } from "framer-motion";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function Products() {
   const { addToCart, allProducts,selectedCategory,filteredProducts } = useCartContext();
   const [showedProducts, setShowedProducts] = useState(6);
 
+  const notify = (product) => {
+    toast(`${product.title} added to the cart`)
+    addToCart(product)
+  }
 
   
 
   useEffect(() => {}, [showedProducts,selectedCategory,]);
 
   return (
-    <div className=" justify-center flex flex-col items-center mb-2 zxl:mx-[620px] md:mx-[240px]">
-      <div className=" grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 xl:grid-cols-3
-       gap-2 mx-2 items-center justify-center w-[600px] h-full  ">
+    <div className=" justify-center flex flex-col items-center mb-2 zxl:mx-[320px] md:mx-[120px]">
+      <ToastContainer />
+      <div className=" grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 xl:grid-cols-3 sm:grid-cols-2 sphone:grid-cols-1 gap-2 mx-2 items-center justify-center      ">
         {filteredProducts.length > 0 ? filteredProducts.slice(0, showedProducts).map((product,index) => (
           <div
             key={product.id}
-            className={` flex flex-col justify-center items-center rounded-xl 
+            className={` flex flex-col justify-center items-center rounded-xl  h-full
          ${product.Instock === 0 ? "bg-gray-400 py-5" : ""}
          ${index % 2 == 0 ? "bg-white" : ""}
          ${index % 2 != 0 ? "bg-slate-600 text-white" : ""}`}
           >
-            <div className=" justify-center items-center flex flex-col  text-center">
+            <div className=" justify-center items-center flex flex-col  text-center ">
               <h1 className="mt-4  text-xl">{product.title}</h1>
               <h2 className="mt-2 text-sm">{product.description}</h2>
             </div>
@@ -75,7 +82,7 @@ function Products() {
                     ? "bg-white text-slate-800 font-semibold "
                     : "text-white "
                 }`}
-                onClick={() => addToCart(product.id)}
+                onClick={() => notify(product)}
               >
                 Add to Cart
               </motion.button>
