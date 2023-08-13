@@ -23,7 +23,18 @@ function Products() {
 
   return (
     <div className=" justify-center flex flex-col items-center mb-2 zxl:mx-[320px] md:mx-[120px]">
-      <ToastContainer />
+<ToastContainer
+position="bottom-right"
+autoClose={1000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover={false}
+theme="colored"
+/>
       <div className=" grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 xl:grid-cols-3 sm:grid-cols-2 sphone:grid-cols-1 gap-2 mx-2 items-center justify-center      ">
         {filteredProducts.length > 0 ? filteredProducts.slice(0, showedProducts).map((product,index) => (
           <div
