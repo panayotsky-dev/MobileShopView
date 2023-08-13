@@ -1,3 +1,49 @@
+# Project Overview
+## https://test1-seven-eta.vercel.app
+
+## Project Structure
+The small project has been developed using React,Next.js,TailwindCSS,Framer-motion to create a seamless and interactive single-page application.
+
+## Components
+- **Header Component:** This component prominently displays the page header text and dynamically updates the number of items in the cart.
+- **Category Component:** Users can explore a range of categories, enabling them to filter products based on their chosen category and color preference.
+- **Products Component:** This section showcases a  list of products. Users can personalize their view by utilizing filters and sorting options.
+  
+
+## Cart Context
+A dedicated context has been implemented to offer users insights into their shopping cart's contents. The context also facilitates operations related to product addition.
+
+## Functionalities
+- **Category Filtering:** Users can  select a specific category to exclusively display products belonging to that category.
+- **Color Filtering:** The color filter feature allows users to refine their search, showcasing products only in their preferred color.
+- **Product Sorting:**  users can sort products by price or name, enhancing the shopping experience.
+- **Adding Products to Cart:** A  process allows users to easily add products to their cart, enhancing convenience.
+- **Decreasing Product Stock:** Whenever a product is added to the cart, the stock availability of that item is appropriately reduced.
+
+## Animations
+- **Hover Animation:** As an engaging user interaction, hovering over a category in the Category component triggers a captivating scaling animation using the Framer Motion library.
+- **"Add to Cart" Animation:** To emphasize the act of adding a product to the cart, a subtle animation draws attention to the "Add to Cart" button, enhancing user engagement.
+
+Feel free to reach out if you have any questions or would like further details about the project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
