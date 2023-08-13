@@ -106,7 +106,7 @@ theme="colored"
       </div>
       {showedProducts < filteredProducts.length && (
         <button
-          className="rounded-xl  mt-4 mb-2 px-8 py-2 black-whiteGradient text-red-500 font-semibold "
+          className="rounded-xl  mt-4 mb-2 px-8 py-2 bg-white  font-semibold "
           onClick={() => setShowedProducts(showedProducts + 6)}
         >
           Load More
