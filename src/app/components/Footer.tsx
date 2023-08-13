@@ -10,7 +10,8 @@ function Footer({}: Props) {
     const phoneNumbers = ['0888 xxx xxxx','0898 xxx xxx']
     const [rotate, setRotate] = useState(false);
   return (
-    <footer className="sticky  phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px]  grid grid-cols-3 bottom-0  text-black font-bold  bg-white w-full justify-center items-center  overflow-hidden">
+    <footer className="sticky  phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px]
+      grid grid-cols-3 bottom-0  text-black font-bold  bg-white w-full justify-center items-center  overflow-hidden">
       
         
       

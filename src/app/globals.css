@@ -34,3 +34,9 @@ body {
   display:flex;
   flex-direction: column;     
 }
+.white-blackGradient{
+  background: linear-gradient(90deg, #FFFF 0%, #FFFF 50%, #4a4b55 50%, #4a4b55 100%);
+}
+.black-whiteGradient{
+  background: linear-gradient(90deg, #4a4b55 0%, #4a4b55 50%, #FFFF 50%, #FFFF 100%);
+}

@@ -15,7 +15,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/1.webp',
+        image:'/Coffee/7.webp',
         rating:'****',
         Instock:4,
  
@@ -57,7 +57,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:"green",Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/5.webp',
         rating:'****',
         Instock:12,
  
@@ -71,7 +71,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/2.webp',
         rating:'****',
         Instock:12,
  
@@ -85,7 +85,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/2.webp',
         rating:'****',
         Instock:12,
  
@@ -113,7 +113,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/6.webp',
         rating:'****',
         Instock:12,
  
@@ -127,7 +127,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/6.webp',
         rating:'****',
         Instock:12,
  
@@ -141,7 +141,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/5.webp',
         rating:'****',
         Instock:12,
  
@@ -169,7 +169,7 @@ export const productData = [
         isDiscounted:false,        
         discount:0,        
         Filtering:{Color:'purple',Useful:false},
-        image:'/Coffee/4.webp',
+        image:'/Coffee/7.webp',
         rating:'****',
         Instock:12,
  
@@ -183,7 +183,7 @@ export const productData = [
       isDiscounted:false,        
       discount:0,        
       Filtering:{Color:'purple',Useful:false},
-      image:'/Coffee/4.webp',
+      image:'/Coffee/7.webp',
       rating:'****',
       Instock:13,
 
@@ -211,13 +211,13 @@ export const categoryList = [
         id:3,
         name:'Donuts',
         title:'Donuts',
-        img:'/Coffee/3.webp',
+        img:'/Coffee/donut.png',
     },
     {
         id:4,
         name:'Biscuits',
         title:'Biscuits',
-        img:'/Coffee/4.webp',
+        img:'/Coffee/5.webp',
     },
 
 

@@ -12,10 +12,11 @@ function Header({cartProducts}) {
 
   return (
     <nav 
-        className="px-2  xphone:h-[45px] phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px] sticky top-0 flex flex-row bg-white w-full 
+        className="px-2  xphone:h-[45px] phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px]
+          sticky top-0 flex flex-row bg-white w-full 
          justify-between items-center hover:bg-[#ffffff83] hover:shadow-xl overflow-hidden">
       <motion.img 
-        src="logo.png" 
+        src="logoLarge.png" 
         alt="logo" 
         className="phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px] xphone:h-[45px] "
         animate={{opacity:1,x:0}}
@@ -26,7 +27,8 @@ function Header({cartProducts}) {
        <motion.img
         src="avatar.png" 
         alt="avatar" 
-        className="phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px] "
+        
+        className="phone:h-[45px] sm:h-[45px] md:h-[55px] zxl:h-[70px] flex justify-center items-center  sm:mr-14 md:mr-20 phone:mr-14"
         animate={{opacity:1,x:0}}
         initial={{opacity:0,x:-200}}
         exit={{opacity:1,x:0}}

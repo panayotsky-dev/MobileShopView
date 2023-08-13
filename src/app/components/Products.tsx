@@ -15,15 +15,16 @@ function Products() {
   useEffect(() => {}, [showedProducts,selectedCategory,]);
 
   return (
-    <div className=" justify-center flex flex-col items-center mb-2">
-      <div className="grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 xl:grid-cols-3 gap-2 mx-2 items-center justify-center w-full h-full  ">
-        {filteredProducts.length > 0 ? filteredProducts.slice(0, showedProducts).map((product) => (
+    <div className=" justify-center flex flex-col items-center mb-2 zxl:mx-[620px] md:mx-[240px]">
+      <div className=" grid phone:grid-cols-2 md:grid-cols-2 zxl:grid-cols-3 xl:grid-cols-3
+       gap-2 mx-2 items-center justify-center w-[600px] h-full  ">
+        {filteredProducts.length > 0 ? filteredProducts.slice(0, showedProducts).map((product,index) => (
           <div
             key={product.id}
             className={` flex flex-col justify-center items-center rounded-xl 
          ${product.Instock === 0 ? "bg-gray-400 py-5" : ""}
-         ${product.id % 2 != 0 ? "bg-white" : ""}
-         ${product.id % 2 == 0 ? "bg-slate-600 text-white" : ""}`}
+         ${index % 2 == 0 ? "bg-white" : ""}
+         ${index % 2 != 0 ? "bg-slate-600 text-white" : ""}`}
           >
             <div className=" justify-center items-center flex flex-col  text-center">
               <h1 className="mt-4  text-xl">{product.title}</h1>
@@ -36,7 +37,7 @@ function Products() {
               className="my-2 max-h-[600px] "
               whileHover={{ scale: 1.15 }}
             />
-            <div className="flex flex-col zxl:flex-row zxl:justify-between xl:flex-row-2 xl:justify-between zxl:w-[600px] xl:w-[550px] md:w-[370px] zxl:mx-4 items-center justify-center  w-full rounded-xl ">
+            <div className="flex flex-col zxl:flex-col zxl:justify-between xl:flex-row-2 xl:justify-between   zxl:mx-4 items-center justify-center   rounded-xl ">
               <h1 className=" flex justify-center items-center">Category : {product.category}</h1>
               <span className=" flex justify-center items-center mx-2">
                 {" "}
@@ -64,7 +65,7 @@ function Products() {
                 </span>
                 
               </span>
-              <span>Price: {product.price}</span>
+              <span>Price: ${product.price}</span>
             </div>
             {product.Instock > 0 && (
               <motion.button
@@ -87,7 +88,7 @@ function Products() {
       </div>
       {showedProducts < filteredProducts.length && (
         <button
-          className="rounded-xl bg-red-400 mt-4 mb-2 px-8 py-2 "
+          className="rounded-xl  mt-4 mb-2 px-8 py-2 black-whiteGradient text-red-500 font-semibold "
           onClick={() => setShowedProducts(showedProducts + 6)}
         >
           Load More
