@@ -11,11 +11,26 @@ import 'react-toastify/dist/ReactToastify.css';
 function Products() {
   const { addToCart, allProducts,selectedCategory,filteredProducts } = useCartContext();
   const [showedProducts, setShowedProducts] = useState(6);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const notify = (product) => {
     toast(`${product.title} added to the cart`)
-    addToCart(product)
+    addToCart(product.id)
   }
+  useEffect(() => {
+    // Update window width when the window is resized
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      console.log(windowWidth)
+    };
+
+    
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [window.innerWidth]);
 
   
 
