@@ -1,6 +1,8 @@
 # Project Overview
 ## https://test1-seven-eta.vercel.app
 
+## Project was created for interview task and it was for limited time
+
 ## Project Structure
 The small project has been developed using React,Next.js,TailwindCSS,Framer-motion to create a seamless and interactive single-page application.
 
