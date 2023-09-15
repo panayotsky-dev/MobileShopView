@@ -14,7 +14,7 @@ The small project has been developed using React,Next.js,TailwindCSS,Framer-moti
 
 ## Cart Context
 A dedicated context has been implemented to offer users insights into their shopping cart's contents. The context also facilitates operations related to product addition.
-
+Also it was only needed cart to keep track of added products to the cart.
 ## Functionalities
 - **Category Filtering:** Users can  select a specific category to exclusively display products belonging to that category.
 - **Color Filtering:** The color filter feature allows users to refine their search, showcasing products only in their preferred color.
