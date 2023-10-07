@@ -1,5 +1,9 @@
 # Project Overview
 ## https://test1-seven-eta.vercel.app
+# Project requirements
+![1](https://github.com/panayotsky-dev/MobileShopView/assets/104060829/2c75452b-a55a-477c-a024-ce848f7282c6)
+![2](https://github.com/panayotsky-dev/MobileShopView/assets/104060829/ab2ece6d-8f0a-4ee9-aaef-7158c4f90ef9)
+
 
 ## Project was created for interview task and it was for limited time
 
